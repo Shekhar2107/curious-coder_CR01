@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts (poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add any additional styles for your new page here */
+      body {
+        background-color: #222;
+        color: #fff; /* Set text color similar to the original page */
+        font-family: "Poppins", sans-serif; /* Use the same font as the original page */
+      }
+      p {
+        max-width: 600px; /* Set a maximum width for the paragraphs */
+        margin: 0 auto 20px; /* Center the paragraphs horizontally */
+        text-align: justify;
+      }
+      img {
+        max-width: 100%; /* Make sure the image doesn't exceed its container's width */
+        height: auto; /* Maintain the image's aspect ratio */
+        margin: 20px auto; /* Center the image horizontally and add space around it */
+        display: block; /* Make the image a block element to center it */
+        max-width: 600px; /* Set a maximum width for the images */
+      }
+      .buttons-container {
+        text-align: center; /* Center the content horizontally */
+        margin-top: 20px; /* Add space above the buttons */
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Add more styles as needed */
+    </style>
+    <title>Luna's Adventure - Read More</title>
+  </head>
+  <body>
+    <div id="google_translate_element"></div>
+    <p id="paragraphContent">
+      In the mystical land of Etherealis, where ancient forests whispered tales
+      of forgotten magic, a celestial event known as the Harmony Eclipse occurs
+      once every thousand years. Legend has it that during this rare celestial
+      alignment, a gateway to the realm of eternity opens, revealing a powerful
+      artifact that can shape the destiny of the world.
+    </p>
+    <img
+      src="https://cdnb.artstation.com/p/assets/images/images/050/113/085/large/mariann-gaspar-csajnaplesz.jpg?1654093074"
+      alt="Image 1 description"
+    />
+
+    <p>
+      Enter Luna, a young and talented enchantress with a mysterious past. As
+      the Harmony Eclipse approaches, Luna discovers a hidden prophecy that
+      foretells the artifact's ability to either bring unparalleled prosperity
+      or plunge Etherealis into eternal darkness. Determined to unravel the
+      secrets of the prophecy, Luna sets out on a journey with her loyal
+      companions, a mischievous forest sprite named Zephyr and a wise old sage
+      named Orion.
+    </p>
+    <img
+      src="https://twinfinite.net/wp-content/uploads/2021/07/Genshin-Impact-7.jpg"
+      alt="Image 2 description"
+    />
+
+    <p>
+      As Luna navigates through enchanted landscapes and encounters magical
+      creatures, she must forge alliances and make decisions that will impact
+      the fate of Etherealis. Along the way, she meets enigmatic individuals,
+      each holding a piece of the puzzle. Among them is Seraphiel, a brooding
+      guardian with a tragic past, and Astra, a spirited astronomer with a
+      connection to the stars.
+    </p>
+    <img
+      src="https://cdn.onlyinyourstate.com/wp-content/uploads/2017/10/14622049674_a3fd5c83e8_o.jpg"
+      alt="Image 3 description"
+    />
+
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+      <button id="button1" onclick="readParagraph()">Read</button>
+      <button id="button2" onclick="redirectToDrive()">Play</button>
+    </div>
+
+    <script>
+      function readParagraph() {
+        fetch("/read_paragraph");
+      }
+      function downloadExe() {
+        // Create a link element
+        var link = document.createElement("a");
+
+        // Set the href attribute to the file path
+        link.href = "/luna/code_red-1.0-win/code_red.exe";
+
+        // Set the download attribute to specify the filename
+        link.download = "your_exe_file.exe";
+
+        // Append the link to the body (required for Firefox)
+        document.body.appendChild(link);
+
+        // Trigger a click event on the link
+        link.click();
+
+        // Remove the link from the body
+        document.body.removeChild(link);
+      }
+    </script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script>
+      function redirectToDrive() {
+        window.location.href =
+          "https://drive.google.com/drive/folders/1KEbJAo73jTPtu_Vcup8_6dxOfkwB3Oau?usp=sharing";
+      }
+    </script>
+  </body>
+</html>

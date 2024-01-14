@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+    <style>
+      /* Add a new style block for custom CSS */
+      .create-button {
+        position: fixed;
+        top: 60px;
+        right: 70px;
+        background-color: #0975e9;
+        color: #f1efef;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <!-- Google Fonts (poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Search</title>
+  </head>
+  <body>
+    <h1>Story Teller</h1>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." class="search" />
+      <span class="material-symbols-outlined"> search </span>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <span class="material-symbols-outlined"> school </span>
+        <h2>Luna's adventure</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          doloribus quibusdam laudantium delectus excepturi ratione, consectetur
+          placeat minima corrupti impedit?
+        </p>
+        <a href="/luna_adventure">Read More</a>
+      </div>
+      <div class="panel">
+        <span class="material-symbols-outlined"> quiz </span>
+        <h2>Search for King</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          commodi tempore atque doloribus nihil recusandae repudiandae natus
+          maxime ad tenetur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="panel">
+        <span class="material-symbols-outlined"> chat </span>
+        <h2>deep caverns</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          commodi tempore atque doloribus nihil recusandae repudiandae natus
+          maxime ad tenetur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="panel">
+        <span class="material-symbols-outlined"> code </span>
+        <h2>The burning world</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          commodi tempore atque doloribus nihil recusandae repudiandae natus
+          maxime ad tenetur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="panel">
+        <span class="material-symbols-outlined"> sell </span>
+        <h2>the book of everything</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          commodi tempore atque doloribus nihil recusandae repudiandae natus
+          maxime ad tenetur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="panel">
+        <span class="material-symbols-outlined"> currency_bitcoin </span>
+        <h2>Getting into outerspace</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          commodi tempore atque doloribus nihil recusandae repudiandae natus
+          maxime ad tenetur.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="create-button" id="createButton">+ Create</div>
+    <script>
+      document
+        .getElementById("createButton")
+        .addEventListener("click", function () {
+          window.location.href = "/create_one";
+        });
+    </script>
+  </body>
+</html>

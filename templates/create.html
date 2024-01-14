@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts (poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add any additional styles for your new page here */
+      body {
+        background-color: #222;
+        color: #fff; /* Set text color similar to the original page */
+        font-family: "Poppins", sans-serif; /* Use the same font as the original page */
+      }
+      p {
+        max-width: 600px; /* Set a maximum width for the paragraphs */
+        margin: 0 auto 20px; /* Center the paragraphs horizontally */
+        text-align: justify;
+      }
+      img {
+        max-width: 100%; /* Make sure the image doesn't exceed its container's width */
+        height: auto; /* Maintain the image's aspect ratio */
+        margin: 20px auto; /* Center the image horizontally and add space around it */
+        display: block; /* Make the image a block element to center it */
+        max-width: 600px; /* Set a maximum width for the images */
+      }
+      .buttons-container {
+        text-align: center; /* Center the content horizontally */
+        margin-top: 20px; /* Add space above the buttons */
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Add more styles as needed */
+    </style>
+    <title>Create</title>
+  </head>
+  <body>
+    <h2>Generate Video</h2>
+    <!-- Update the form action to submit to the correct route -->
+    <form method="post" action="{{ url_for('generate') }}">
+      <label for="writer_prompt">Writer Prompt:</label>
+      <input type="text" id="writer_prompt" name="writer_prompt" required />
+      <button type="submit">Generate Video</button>
+    </form>
+
+    {% if matching_video %}
+    <h3>Generated Video :</h3>
+
+    <!-- Video Player Section (hidden by default) -->
+    <div class="video-container" style="display: none">
+      <video width="400px" height="400px" controls>
+        <source
+          src="{{ url_for('play', matching_video=matching_video) }}"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- JavaScript to show the video section after a delay -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to show the video section after a delay
+        function showVideoSection() {
+          // Display the video container
+          document.querySelector(".video-container").style.display = "block";
+        }
+
+        // Call the showVideoSection function after a 5-second delay
+        setTimeout(showVideoSection, 3000);
+      });
+    </script>
+    {% endif %}
+  </body>
+</html>
