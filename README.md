@@ -1,2 +1,2 @@
-# filter-search
-This is a normal FAQ website with filter search implemented using JavaScript.
+# story teller
+This is a normal FAQ website with story teller implemented using JavaScript.
